@@ -4,40 +4,41 @@ from django.views.generic import TemplateView
 # Create your views here.
 def home(requests):
     title = 'Детский магазин "МЕДВЕЖЁНОК"'
-    text1 = 'Главная'
-    text2 = 'Магазин'
-    text3 = 'Корзина'
+    text1 = 'Главная страница'
+    text2 = 'Главная'
+    text3 = 'Магазин'
+    text4 = 'Корзина'
     context = {
         'title': title,
-        'text1': text1,
-        'text2': text2,
-        'text3': text3
+        'text': text1,
+        'text1': text2,
+        'text2': text3,
+        'text3': text4
     }
-    return render(requests, 'platform.html', context)
+    return render(requests, 'third_task/platform.html', context)
 
 def shop(requests):
     title = 'Детские товары'
-    text = 'Детские товары'
-    text1 = 'Велосипед'
-    text2 = 'Кукла'
-    text3 = 'Конструктор'
+    text5 = 'Детские товары'
+    list_shop = ['Велосипед','Кукла','Конструктор']
     context = {
         'title': title,
-        'text': text,
-        'text1': text1,
-        'text2': text2,
-        'text3': text3
+        'text': text5,
+        'list_shop': list_shop
     }
-    return render(requests, 'games.html', context)
+    return render(requests, 'third_task/games.html', context)
 
     
 
 def basket(requests):
     title = 'Корзина'
-    text = 'Извините, ваша корзина пуста'
+    text6 = 'Корзина'
+    text7 = 'Извините, ваша корзина пуста'
+
     context = {
         'title': title,
-        'text': text
+        'text': text6,
+        'text1': text7
     }
-    return render(requests, 'cart.html', context)
+    return render(requests, 'third_task/cart.html', context)
 
