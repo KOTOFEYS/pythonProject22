@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from task4.views import home, shop, basket
+from task5.views import sign_up_by_html, sign_up_by_django
 from django.views.generic import TemplateView
 # urlpatterns = [
 #     path('admin/', admin.site.urls),
@@ -25,10 +25,17 @@ from django.views.generic import TemplateView
 #     path('index/', ClassIndex.as_view())
 # ]
 
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     # path('menu', parent),
+#     path('', home),
+#     path('games/', shop),
+#     path('cart/', basket)
+#     ]
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('menu', parent),
-    path('', home),
-    path('games/', shop),
-    path('cart/', basket)
+    path('', sign_up_by_html),
+    path('django_sign_up/', sign_up_by_django)
     ]
